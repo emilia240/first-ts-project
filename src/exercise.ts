@@ -58,11 +58,13 @@ const obj = {
     a: 1,
     b: 2 
 };
-console.log(AddNumbers(obj));
 
 function AddNumbers(obj: { a: number, b: number }): number {
     return obj.a + obj.b;
 }
+
+
+console.log(AddNumbers(obj));
 
 
 
@@ -76,6 +78,10 @@ const myFavoriteColors: string[] = ["blue", "purple", "green"];
 for (let i = 0; i < myFavoriteColors.length; i++) {
     console.log(myFavoriteColors[i]);
 }
+
+for (const color of myFavoriteColors) {
+    console.log(color);
+} //other way
 
 
 // Assignment 5 : Conditional Logic
@@ -96,14 +102,14 @@ function isPositive(num: number): boolean {
 // Create an interface for a person and use it to define an object + print the person's name and age.
 
 // Your code here : interface Person {} // define 3 properties: firstName, lastName, age
-interface Person {
+interface PersonStuff {
   firstName: string;
   lastName: string;
   age: number;
-}
+}//this is a template
 // Your code here : object person with 3 properties and values :: const person = {...assign data here} 
 
-const person: Person = {
+const person: PersonStuff = {
   firstName: "Lilo",
   lastName: "Pelekai",
   age: 7
@@ -124,6 +130,8 @@ console.log(`Person: ${person.firstName} ${person.lastName}, Age: ${person.age}`
 
 // Your code here : type NumberOrString
 type NumberOrString= number | string;
+
+//DO NOT use "any"
 
 // Your code here : 2 variables with declaration and assignments, one with a number and one with a string
 
@@ -149,7 +157,7 @@ console.log(value2);
 interface Book {
   title: string;
   author?: string; // optional property
-}
+}//template
 
 
 const book1: Book = {
@@ -193,7 +201,7 @@ type Address = {
 
 // Define the UnionPerson type as a union of Person and undefined
 type UnionPerson = Person | undefined;
-
+//declaring undeefined for errors
 // Define the IntersectionPerson type as an intersection of Person and Address
 type IntersectionPerson = Person & Address;
 
