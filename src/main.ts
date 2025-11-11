@@ -1,10 +1,12 @@
 import './style.css'
 
 //ex 1
-const movieTitle :string = "Frankenstein";
+const movieTitle :string = "Frankenstein"; //this is how we declare variables in TS
 const movieYear :number = 1931;
-const rating = 7.9;
-const isReleased :boolean =true;
+const rating = 7.9; //type inference
+const isReleased :boolean =true; //type boolean
+const actors :string[] = ["Boris Karloff", "Colin Clive", "John Boles"]; //array of strings
+
 
 //ex 2
 //declaring the variables; declaring the function- function signature
